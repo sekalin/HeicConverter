@@ -82,7 +82,8 @@ def convert_heic_file(source_file, target_file, overwrite, remove):
 
     except Exception as e:
         print(f"Unable to convert {source_file}: {e}")
-
+    
+    image.close()
     if success and remove:
         os.remove(source_file)
 
